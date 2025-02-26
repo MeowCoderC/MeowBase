@@ -47,6 +47,6 @@ public class InputReader : ScriptableObject, PlayerInputAction.IGameplayActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        this.onMove?.Invoke(context.ReadValue<Vector2>());
     }
 }
